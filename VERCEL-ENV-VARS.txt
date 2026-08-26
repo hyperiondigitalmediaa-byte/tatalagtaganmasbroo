@@ -1,0 +1,52 @@
+# ⚠️ PENTING: File ini berisi environment variables untuk Vercel
+# Copy semua ini ke Vercel Dashboard setelah deploy
+# JANGAN COMMIT FILE INI KE GIT!
+
+# Database (Neon DB)
+DATABASE_URL=postgresql://neondb_owner:npg_C2i9HaYJxVQh@ep-ancient-fire-a1xfw43f-pooler.ap-southeast-1.aws.neon.tech/neondb?sslmode=require
+DIRECT_DATABASE_URL=postgresql://neondb_owner:npg_C2i9HaYJxVQh@ep-ancient-fire-a1xfw43f.ap-southeast-1.aws.neon.tech/neondb?sslmode=require
+
+# NextAuth (UPDATED - New Secret)
+NEXTAUTH_SECRET=vVsEMfl5EC1O3c4neRB3T3/NtlW50jyU6630WFxGlkA=
+NEXTAUTH_URL=https://your-project-name.vercel.app
+
+# Google OAuth
+GOOGLE_CLIENT_ID=899111055025-ei4vjieupvgak2g2mikd5s4ljdpj1im4.apps.googleusercontent.com
+GOOGLE_CLIENT_SECRET=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
+
+# Cloudinary
+NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME=droqacd9z
+CLOUDINARY_API_KEY=684392861579935
+CLOUDINARY_API_SECRET=fK_q8tLtPWOU5eXQLl7fix00JYQ
+
+# Cloudflare Turnstile (CAPTCHA)
+NEXT_PUBLIC_TURNSTILE_SITE_KEY=0x4AAAAAAB_dlZwPvXBU8UKw
+TURNSTILE_SECRET_KEY=0x4AAAAAAB_dlXE_WzvGmr25WHUkzT9celk
+
+# Cron Job Secret
+CRON_SECRET=cron-secret-portal-berita-2024-secure-key-xyz789
+
+# Google Analytics
+NEXT_PUBLIC_GA_ID=G-JTPLZKCR8Z
+
+# Site Configuration
+NEXT_PUBLIC_SITE_URL=https://your-project-name.vercel.app
+NEXT_PUBLIC_SITE_NAME=Portal Berita
+
+# Email Configuration (Optional - bisa skip dulu)
+SMTP_HOST=smtp.gmail.com
+SMTP_PORT=587
+SMTP_SECURE=false
+SMTP_USER=your-email@gmail.com
+SMTP_PASS=your-app-password
+SMTP_FROM_NAME=Portal Berita
+SMTP_FROM_EMAIL=noreply@portalberita.com
+ADMIN_EMAIL=admin@portalberita.com
+
+# ============================================
+# CATATAN PENTING:
+# ============================================
+# 1. Ganti "your-project-name" dengan nama project Vercel Anda
+# 2. Setelah deploy, update NEXTAUTH_URL dan NEXT_PUBLIC_SITE_URL
+# 3. Update Google OAuth redirect URI di Google Cloud Console
+# 4. SMTP vars bisa di-skip dulu (optional)

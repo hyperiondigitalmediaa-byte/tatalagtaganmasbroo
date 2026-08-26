@@ -1,0 +1,464 @@
+{
+  "timestamp": "2025-12-19T07:55:10.551Z",
+  "data": {
+    "users": [
+      {
+        "id": "cmhk70l4s0000uonoi71zwtb4",
+        "email": "aizaa6157@gmail.com",
+        "name": "aina aiza",
+        "password": null,
+        "role": "USER",
+        "image": "https://lh3.googleusercontent.com/a/ACg8ocJ17bNQ-gaBqzAC7hIPwAAD8_svVKhgaTbefMVO2paORZLHvQ=s96-c",
+        "googleId": "108253051604312461258",
+        "emailVerified": "2025-11-04T06:33:38.039Z",
+        "createdAt": "2025-11-04T06:33:38.043Z",
+        "updatedAt": "2025-11-04T06:34:32.748Z",
+        "isBanned": false,
+        "reputation": 1
+      },
+      {
+        "id": "cmhk7mj8e0003uonobs4r7rqv",
+        "email": "aarisardiansyah94@gmail.com",
+        "name": "aris arisardiansyah",
+        "password": null,
+        "role": "USER",
+        "image": "https://lh3.googleusercontent.com/a/ACg8ocLHwMImtkp70uoD6ToRvI2BO-BG-dpyOVsekkTQPkrsl5S8Lw=s96-c",
+        "googleId": "103228744193569471358",
+        "emailVerified": "2025-11-04T06:50:42.013Z",
+        "createdAt": "2025-11-04T06:50:42.015Z",
+        "updatedAt": "2025-11-04T06:51:49.668Z",
+        "isBanned": true,
+        "reputation": 0
+      },
+      {
+        "id": "cmhk9guqu0000uo2krdezbapp",
+        "email": "dadan@dadan.com",
+        "name": "Dadan",
+        "password": "$2b$10$wCb5QkNbxMHPqPK06B1EyOrFa5Xbddx/hfSfHwiTYJJhYKw/b9BqC",
+        "role": "EDITOR",
+        "image": null,
+        "googleId": null,
+        "emailVerified": null,
+        "createdAt": "2025-11-04T07:42:16.230Z",
+        "updatedAt": "2025-11-04T07:42:16.230Z",
+        "isBanned": false,
+        "reputation": 0
+      },
+      {
+        "id": "cmhrsz5fz0000ky04vmwytyu0",
+        "email": "harintassudirman@gmail.com",
+        "name": "Sudirman Harintas",
+        "password": null,
+        "role": "USER",
+        "image": "https://lh3.googleusercontent.com/a/ACg8ocIN5qRapzI9iO-ah2oZR5i1aX95Gi1gIGtaDcqO7ekuz-Wb=s96-c",
+        "googleId": "100323210519335639013",
+        "emailVerified": "2025-11-09T14:22:45.838Z",
+        "createdAt": "2025-11-09T14:22:45.839Z",
+        "updatedAt": "2025-11-09T14:34:10.983Z",
+        "isBanned": false,
+        "reputation": -1
+      },
+      {
+        "id": "cmhitzsj20000uo24e1c7ast1",
+        "email": "admin@example.com",
+        "name": "Admin",
+        "password": "$2b$10$VwbJC40yM.cJNwGVx5uIJOwAsg7GXNmwGko1oVs1FyO.J31BO3pXa",
+        "role": "ADMIN",
+        "image": null,
+        "googleId": null,
+        "emailVerified": null,
+        "createdAt": "2025-11-03T07:41:19.788Z",
+        "updatedAt": "2025-11-15T05:58:52.885Z",
+        "isBanned": false,
+        "reputation": -1
+      }
+    ],
+    "categories": [
+      {
+        "id": "cmhiu3nqv0001uox8r813wt65",
+        "name": "Ekonomi",
+        "slug": "ekonomi",
+        "description": null,
+        "createdAt": "2025-11-03T07:44:20.216Z",
+        "updatedAt": "2025-11-03T07:44:20.216Z"
+      },
+      {
+        "id": "cmhivnl2m0004uozoaw2oegx0",
+        "name": "Politik",
+        "slug": "politik",
+        "description": null,
+        "createdAt": "2025-11-03T08:27:49.486Z",
+        "updatedAt": "2025-11-03T08:27:49.486Z"
+      },
+      {
+        "id": "cmhk2mfys0000uoi0zyf3z27o",
+        "name": "Teknologi",
+        "slug": "teknologi",
+        "description": null,
+        "createdAt": "2025-11-04T04:30:39.700Z",
+        "updatedAt": "2025-11-04T04:30:39.700Z"
+      },
+      {
+        "id": "cmhotsm690000uoh40udg5a54",
+        "name": "Wisata",
+        "slug": "wisat",
+        "description": null,
+        "createdAt": "2025-11-07T12:22:22.017Z",
+        "updatedAt": "2025-11-07T12:23:34.533Z"
+      }
+    ],
+    "tags": [],
+    "articles": [
+      {
+        "id": "cmjbjd2nj0002ju04h3bd2n5b",
+        "title": "Pesona Wisata Alam Parung, Surga Tersembunyi di Tasikmalaya",
+        "slug": "pesona-wisata-alam-parung-surga-tersembunyi-di-tasikmalaya",
+        "content": "<p>Terletak di Kabupaten Tasikmalaya, Wisata Alam Parung menjadi salah satu destinasi unggulan bagi para pecinta keindahan alam dan suasana pedesaan yang asri. Dengan panorama hijau, udara sejuk, dan suasana tenang, Parung menawarkan pengalaman wisata yang menyegarkan bagi siapa pun yang ingin melepas penat dari hiruk-pikuk kota.</p><h3>Keindahan Alam yang Menawan</h3><p>Wisata Alam Parung dikelilingi oleh perbukitan hijau dan aliran sungai jernih yang menambah keindahan tempat ini. Pengunjung dapat menikmati hamparan sawah, pepohonan rindang, serta panorama alam yang sangat cocok untuk bersantai atau berfoto. Pada pagi hari, kabut tipis menyelimuti area wisata, menciptakan suasana magis yang sulit dilupakan.</p><h3>Daya Tarik dan Aktivitas Seru</h3><p>Selain keindahan alamnya, di Parung pengunjung bisa menikmati berbagai aktivitas menarik, seperti:</p><ul><li><p>Bermain air di sungai alami yang airnya dingin dan jernih.</p></li><li><p>Camping dan piknik keluarga di area terbuka yang aman dan nyaman.</p></li><li><p>Spot foto instagramable dengan latar pegunungan dan pepohonan tropis.</p></li><li><p>Menikmati kuliner khas Sunda, seperti nasi liwet, sambal terasi, dan lalapan segar dari hasil bumi warga sekitar.</p></li></ul><p>Tempat ini juga cocok untuk kegiatan komunitas seperti outing kantor, kemah pelajar, atau kegiatan pramuka karena memiliki area yang luas dan alami.</p><h3>Suasana Pedesaan yang Asri</h3><p>Salah satu keunggulan Wisata Alam Parung adalah suasana pedesaannya yang masih sangat alami. Warga sekitar juga ramah dan terbuka terhadap wisatawan. Kamu bisa berinteraksi langsung dengan masyarakat setempat, belajar tentang budaya Sunda, dan melihat aktivitas pertanian tradisional.</p><h3>Lokasi dan Akses</h3><p>Wisata Alam Parung berada di Kecamatan Leuwisari, Kabupaten Tasikmalaya, dan dapat dijangkau sekitar 30 menit dari pusat kota Tasikmalaya. Jalan menuju lokasi sudah cukup baik, dan tersedia area parkir yang luas bagi kendaraan pribadi maupun rombongan.</p><h3>Tips Berkunjung</h3><ul><li><p>Datanglah pagi hari agar bisa menikmati udara segar dan pemandangan terbaik.</p></li><li><p>Gunakan pakaian nyaman dan alas kaki yang sesuai untuk kegiatan di alam.</p></li><li><p>Jangan lupa membawa kamera untuk mengabadikan momen indah!</p></li><li><p>Selalu jaga kebersihan dan kelestarian alam selama berada di lokasi.</p></li></ul><h3>Penutup</h3><p>Wisata Alam Parung Tasikmalaya adalah destinasi yang sempurna untuk kamu yang mencari ketenangan, keindahan, dan pengalaman alami yang otentik. Dengan keindahan alam yang masih terjaga dan keramahan warga setempat, Parung siap menjadi pilihan wisata terbaik di Tasikmalaya.</p>",
+        "excerpt": "Terletak di Kabupaten Tasikmalaya, Wisata Alam Parung menjadi salah satu destinasi unggulan bagi para pecinta keindahan alam dan suasana pedesaan yang asri. Dengan panorama hijau, udara sejuk, dan suasana tenang, Parung menawarkan pengalaman wisata yang menyegarkan bagi siapa pun yang ingin melepas penat dari hiruk-pikuk kota.",
+        "featuredImage": "https://res.cloudinary.com/droqacd9z/image/upload/v1766067755/news/article/rttmhxyh0ghdk5aolams.jpg",
+        "status": "PUBLISHED",
+        "views": 9,
+        "showViews": true,
+        "metaTitle": "Pesona Wisata Alam Parung, Surga Tersembunyi di Tasikmalaya",
+        "metaDescription": "Terletak di Kabupaten Tasikmalaya, Wisata Alam Parung menjadi salah satu destinasi unggulan bagi para pecinta keindahan alam dan suasana pedesaan yang asri. Den",
+        "focusKeyword": null,
+        "canonicalUrl": null,
+        "ogTitle": null,
+        "ogDescription": null,
+        "ogImage": null,
+        "scheduledAt": null,
+        "publishedAt": "2025-12-18T14:28:45.102Z",
+        "createdAt": "2025-12-18T14:28:45.103Z",
+        "updatedAt": "2025-12-19T07:21:55.880Z",
+        "authorId": "cmhitzsj20000uo24e1c7ast1",
+        "categoryId": "cmhotsm690000uoh40udg5a54",
+        "commentsEnabled": true
+      }
+    ],
+    "articleTags": [],
+    "comments": [],
+    "commentReports": [],
+    "banners": [],
+    "menus": [
+      {
+        "id": "cmhrs2c200002l4049fo4eo1c",
+        "label": "Tentang Kami",
+        "url": "https://news-dusky-delta.vercel.app/halaman/tentang-kami",
+        "type": "LINK",
+        "parentId": null,
+        "isActive": true,
+        "order": 1,
+        "openNewTab": false,
+        "createdAt": "2025-11-09T13:57:14.760Z",
+        "updatedAt": "2025-11-09T13:57:14.760Z"
+      },
+      {
+        "id": "cmhmvasgh0002uos86npix06l",
+        "label": "Redaksi",
+        "url": "https://news-dusky-delta.vercel.app/halaman/redaksi",
+        "type": "LINK",
+        "parentId": null,
+        "isActive": true,
+        "order": 0,
+        "openNewTab": false,
+        "createdAt": "2025-11-06T03:28:57.212Z",
+        "updatedAt": "2025-12-19T03:14:13.801Z"
+      }
+    ],
+    "pages": [
+      {
+        "id": "cmhmv9wsq0000uos8qu20wesz",
+        "title": "Redaksi",
+        "slug": "redaksi",
+        "content": "<p><strong>Lorem Ipsum</strong><span style=\"color: rgb(0, 0, 0);\"> is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</span></p><p><strong>Lorem Ipsum</strong><span style=\"color: rgb(0, 0, 0);\"> is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</span></p><p><strong>Lorem Ipsum</strong><span style=\"color: rgb(0, 0, 0);\"> is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</span></p><p><strong>Lorem Ipsum</strong><span style=\"color: rgb(0, 0, 0);\"> is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</span></p>",
+        "metaTitle": null,
+        "metaDescription": null,
+        "isActive": true,
+        "createdAt": "2025-11-06T03:28:16.202Z",
+        "updatedAt": "2025-11-06T03:28:16.202Z"
+      },
+      {
+        "id": "cmhrs1fmd0000l404h1h57g3s",
+        "title": "Tentang Kami",
+        "slug": "tentang-kami",
+        "content": "<p><strong>Lorem Ipsum</strong><span style=\"color: rgb(0, 0, 0);\"> is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</span></p><p><strong>Lorem Ipsum</strong><span style=\"color: rgb(0, 0, 0);\"> is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</span></p><p><strong>Lorem Ipsum</strong><span style=\"color: rgb(0, 0, 0);\"> is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</span></p><p><strong>Lorem Ipsum</strong><span style=\"color: rgb(0, 0, 0);\"> is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</span></p>",
+        "metaTitle": null,
+        "metaDescription": null,
+        "isActive": true,
+        "createdAt": "2025-11-09T13:56:32.726Z",
+        "updatedAt": "2025-11-09T13:56:32.726Z"
+      }
+    ],
+    "siteSettings": [
+      {
+        "id": "cmhkpqv3g0006uozc1tsuk01v",
+        "key": "primaryColor",
+        "value": "#dc2626",
+        "category": "theme",
+        "description": null,
+        "createdAt": "2025-11-04T15:17:57.100Z",
+        "updatedAt": "2025-11-04T15:18:00.789Z"
+      },
+      {
+        "id": "cmhkpqv4p0007uozcd9dgdkbs",
+        "key": "secondaryColor",
+        "value": "#10b981",
+        "category": "theme",
+        "description": null,
+        "createdAt": "2025-11-04T15:17:57.145Z",
+        "updatedAt": "2025-11-04T15:18:00.831Z"
+      },
+      {
+        "id": "cmhkpqv5b0008uozcofpix6lk",
+        "key": "accentColor",
+        "value": "#f59e0b",
+        "category": "theme",
+        "description": null,
+        "createdAt": "2025-11-04T15:17:57.167Z",
+        "updatedAt": "2025-11-04T15:18:00.853Z"
+      },
+      {
+        "id": "cmhkpqv5x0009uozc2l2ve7o8",
+        "key": "backgroundColor",
+        "value": "#ffffff",
+        "category": "theme",
+        "description": null,
+        "createdAt": "2025-11-04T15:17:57.189Z",
+        "updatedAt": "2025-11-04T15:18:00.875Z"
+      },
+      {
+        "id": "cmhkpqv6j000auozcyyk0n6qh",
+        "key": "textColor",
+        "value": "#1f2937",
+        "category": "theme",
+        "description": null,
+        "createdAt": "2025-11-04T15:17:57.211Z",
+        "updatedAt": "2025-11-04T15:18:00.897Z"
+      },
+      {
+        "id": "cmhkpqv75000buozcq1l6vuxa",
+        "key": "fontFamily",
+        "value": "Inter",
+        "category": "theme",
+        "description": null,
+        "createdAt": "2025-11-04T15:17:57.234Z",
+        "updatedAt": "2025-11-04T15:18:00.919Z"
+      },
+      {
+        "id": "cmhmvn5y30000uop4rjkbcpqs",
+        "key": "siteName",
+        "value": "Portal Berita",
+        "category": "general",
+        "description": null,
+        "createdAt": "2025-11-06T03:38:34.568Z",
+        "updatedAt": "2025-11-06T05:17:42.034Z"
+      },
+      {
+        "id": "cmhmvn60g0001uop43dpmz7d6",
+        "key": "siteDescription",
+        "value": "Website berita terkini dan terpercaya",
+        "category": "general",
+        "description": null,
+        "createdAt": "2025-11-06T03:38:34.672Z",
+        "updatedAt": "2025-11-06T05:17:42.087Z"
+      },
+      {
+        "id": "cmhmvn6110002uop4bwjmda9a",
+        "key": "logoUrl",
+        "value": "/uploads/logo-1762406259675.png",
+        "category": "general",
+        "description": null,
+        "createdAt": "2025-11-06T03:38:34.694Z",
+        "updatedAt": "2025-11-06T05:17:42.110Z"
+      },
+      {
+        "id": "cmhmvn61m0003uop4y7jyeoow",
+        "key": "faviconUrl",
+        "value": "/uploads/favicon-1762400312840.png",
+        "category": "general",
+        "description": null,
+        "createdAt": "2025-11-06T03:38:34.715Z",
+        "updatedAt": "2025-11-06T05:17:42.133Z"
+      }
+    ],
+    "sidebarWidgets": [
+      {
+        "id": "cmhn91rcb0001uoukoy80af8f",
+        "type": "trending",
+        "title": "Artikel Trending",
+        "isActive": true,
+        "order": 1,
+        "config": {
+          "limit": 6
+        },
+        "createdAt": "2025-11-06T09:53:50.507Z",
+        "updatedAt": "2025-11-06T09:53:50.507Z"
+      },
+      {
+        "id": "cmhn91rd30002uoukqmyl9n07",
+        "type": "categories",
+        "title": "Kategori Populer",
+        "isActive": true,
+        "order": 2,
+        "config": {
+          "limit": 8
+        },
+        "createdAt": "2025-11-06T09:53:50.536Z",
+        "updatedAt": "2025-11-06T09:53:50.536Z"
+      },
+      {
+        "id": "cmhn91rdw0003uoukz9e1ljyr",
+        "type": "latest",
+        "title": "Artikel Terbaru",
+        "isActive": false,
+        "order": 3,
+        "config": {
+          "limit": 5
+        },
+        "createdAt": "2025-11-06T09:53:50.565Z",
+        "updatedAt": "2025-11-06T09:53:50.565Z"
+      },
+      {
+        "id": "cmhn91rep0004uouk48lpptzk",
+        "type": "newsletter",
+        "title": "Newsletter",
+        "isActive": false,
+        "order": 4,
+        "config": {},
+        "createdAt": "2025-11-06T09:53:50.594Z",
+        "updatedAt": "2025-11-06T09:53:50.594Z"
+      }
+    ],
+    "sidebarSettings": [
+      {
+        "id": "default",
+        "isActive": true,
+        "isSticky": false,
+        "updatedAt": "2025-11-07T13:19:22.197Z"
+      }
+    ],
+    "socialMedia": [
+      {
+        "id": "seed-youtube",
+        "platform": "youtube",
+        "url": "https://youtube.com/@portalberita",
+        "isActive": true,
+        "order": 4,
+        "createdAt": "2025-11-06T13:39:24.088Z",
+        "updatedAt": "2025-11-06T13:39:24.088Z"
+      },
+      {
+        "id": "seed-instagram",
+        "platform": "instagram",
+        "url": "https://instagram.com/portalberita",
+        "isActive": true,
+        "order": 3,
+        "createdAt": "2025-11-06T13:39:23.984Z",
+        "updatedAt": "2025-11-06T13:54:36.834Z"
+      }
+    ],
+    "auditLogs": [
+      {
+        "id": "cmjbj0z5v0000ju04mcbzcsls",
+        "userId": "cmhitzsj20000uo24e1c7ast1",
+        "action": "DELETE_ARTICLE",
+        "resource": "article",
+        "resourceId": null,
+        "details": {
+          "count": 19,
+          "articles": [
+            {
+              "id": "cmhiu64ku0005uox8jhdmwid2",
+              "title": "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,"
+            },
+            {
+              "id": "cmhiu49r90003uox8rexiud0k",
+              "title": "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots"
+            },
+            {
+              "id": "cmhk2p8un0004uoi0n5uvvzi5",
+              "title": " unchanged. It was popularised in the 1960s with the release"
+            },
+            {
+              "id": "cmhiu9n370009uox8tyklalmp",
+              "title": "It is a long established fact that a reader will be distracted by the readable content of a page"
+            },
+            {
+              "id": "cmhj61sxj0005uob48u6fipew",
+              "title": "simply dummy text of the printing and typesetting industry. Lorem Ipsum"
+            },
+            {
+              "id": "cmhk9j7uk0002uo2k82wrgaom",
+              "title": "If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing"
+            },
+            {
+              "id": "cmhj60ljs0003uob4ef4fdwgy",
+              "title": " printing and typesetting industry. Lorem Ipsum has been the industry's standard"
+            },
+            {
+              "id": "cmhqaj7q60001l104r74i83aq",
+              "title": "Content here, content here', making it look like readable English"
+            },
+            {
+              "id": "cmhj5z6cp0001uob4dnift1nl",
+              "title": "centuries, but also the leap into electronic typesetting, remaining essentially"
+            },
+            {
+              "id": "cmhk2u3h50008uoi09cxjfxzy",
+              "title": "suffered alteration in some form, by injected humour, or randomised"
+            },
+            {
+              "id": "cmhiu83g30007uox8b7aobegx",
+              "title": "but also the leap into electronic typesetting, remaining essentially unchanged"
+            },
+            {
+              "id": "cmhj64l1l0009uob4cte7kpi3",
+              "title": " took a galley of type and scrambled it to make a type specimen book"
+            },
+            {
+              "id": "cmhk2qr1f0006uoi0ff0f082m",
+              "title": "from a Lorem Ipsum passage, and going through the cites "
+            },
+            {
+              "id": "cmhouppi90004uoh4zdd9rw8o",
+              "title": "dummy text of the printing and typesetting industry. Lorem Ipsum"
+            },
+            {
+              "id": "cmhug1iz20001jy04xm8qlfvc",
+              "title": " It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged"
+            },
+            {
+              "id": "cmhj63dpo0007uob4oitmxysk",
+              "title": "standard dummy text ever since the 1500s, when an unknown printer "
+            },
+            {
+              "id": "cmhk2v3e1000auoi04fl770zx",
+              "title": "anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators "
+            },
+            {
+              "id": "cmhk2njs50002uoi044ctqbac",
+              "title": "electronic typesetting, remaining essentially unchanged"
+            },
+            {
+              "id": "cmhou3a1b0002uoh4s3jwubdd",
+              "title": "Pesona Wisata Alam Parung, Surga Tersembunyi di Tasikmalaya"
+            }
+          ],
+          "bulkAction": true
+        },
+        "ipAddress": null,
+        "userAgent": null,
+        "status": "SUCCESS",
+        "errorMessage": null,
+        "createdAt": "2025-12-18T14:19:20.707Z"
+      }
+    ]
+  },
+  "stats": {
+    "users": 5,
+    "categories": 4,
+    "tags": 0,
+    "articles": 1,
+    "comments": 0
+  }
+}

@@ -1,0 +1,255 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+  directUrl = env("DIRECT_DATABASE_URL")
+}
+
+model User {
+  id            String    @id @default(cuid())
+  email         String    @unique
+  name          String
+  password      String?   // Optional for Google OAuth users
+  role          Role      @default(USER) // Default USER for public users
+  image         String?   // Profile picture from Google
+  googleId      String?   @unique // Google OAuth ID
+  emailVerified DateTime? // Email verification
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+  articles      Article[]
+  comments      Comment[]
+  isBanned      Boolean   @default(false)
+  reputation    Int       @default(0)
+}
+
+model Category {
+  id          String    @id @default(cuid())
+  name        String
+  slug        String    @unique
+  description String?
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+  articles    Article[]
+}
+
+model Tag {
+  id        String       @id @default(cuid())
+  name      String
+  slug      String       @unique
+  createdAt DateTime     @default(now())
+  articles  ArticleTag[]
+}
+
+model Article {
+  id              String       @id @default(cuid())
+  title           String
+  slug            String       @unique
+  content         String
+  excerpt         String?
+  featuredImage   String?
+  status          Status       @default(DRAFT)
+  views           Int          @default(0)
+  showViews       Boolean      @default(true)
+  metaTitle       String?
+  metaDescription String?
+  focusKeyword    String?      // SEO: Focus keyword
+  canonicalUrl    String?      // SEO: Canonical URL
+  ogTitle         String?      // Open Graph: Title
+  ogDescription   String?      // Open Graph: Description
+  ogImage         String?      // Open Graph: Image
+  scheduledAt     DateTime?    // Scheduled publish time
+  publishedAt     DateTime?
+  createdAt       DateTime     @default(now())
+  updatedAt       DateTime     @updatedAt
+  authorId        String
+  categoryId      String
+  author          User         @relation(fields: [authorId], references: [id])
+  category        Category     @relation(fields: [categoryId], references: [id])
+  tags            ArticleTag[]
+  comments        Comment[]
+  commentsEnabled Boolean      @default(true)
+
+  @@index([slug])
+  @@index([status])
+  @@index([publishedAt])
+}
+
+model ArticleTag {
+  articleId String
+  tagId     String
+  article   Article @relation(fields: [articleId], references: [id], onDelete: Cascade)
+  tag       Tag     @relation(fields: [tagId], references: [id], onDelete: Cascade)
+
+  @@id([articleId, tagId])
+}
+
+model Banner {
+  id        String   @id @default(cuid())
+  title     String
+  type      String   @default("IMAGE")
+  imageUrl  String?
+  adCode    String?
+  linkUrl   String?
+  position  String   @default("ARTICLE_LIST")
+  isActive  Boolean  @default(true)
+  order     Int      @default(0)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([position, isActive])
+}
+
+model Menu {
+  id         String   @id @default(cuid())
+  label      String
+  url        String
+  type       String   @default("LINK")
+  parentId   String?
+  isActive   Boolean  @default(true)
+  order      Int      @default(0)
+  openNewTab Boolean  @default(false)
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+  parent     Menu?    @relation("MenuToSubmenu", fields: [parentId], references: [id], onDelete: Cascade)
+  children   Menu[]   @relation("MenuToSubmenu")
+
+  @@index([isActive, order])
+  @@index([parentId])
+}
+
+model Page {
+  id              String   @id @default(cuid())
+  title           String
+  slug            String   @unique
+  content         String
+  metaTitle       String?
+  metaDescription String?
+  isActive        Boolean  @default(true)
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+
+  @@index([slug])
+  @@index([isActive])
+}
+
+enum Role {
+  ADMIN
+  EDITOR
+  USER
+}
+
+enum Status {
+  DRAFT
+  SCHEDULED
+  PUBLISHED
+  ARCHIVED
+}
+
+model Comment {
+  id            String          @id @default(cuid())
+  content       String
+  articleId     String
+  userId        String
+  parentId      String?
+  status        CommentStatus   @default(PENDING)
+  isSpam        Boolean         @default(false)
+  spamScore     Int             @default(0)
+  ipAddress     String?
+  userAgent     String?
+  createdAt     DateTime        @default(now())
+  updatedAt     DateTime        @updatedAt
+  article       Article         @relation(fields: [articleId], references: [id], onDelete: Cascade)
+  user          User            @relation(fields: [userId], references: [id], onDelete: Cascade)
+  parent        Comment?        @relation("CommentReplies", fields: [parentId], references: [id], onDelete: Cascade)
+  replies       Comment[]       @relation("CommentReplies")
+  reports       CommentReport[]
+
+  @@index([articleId, status])
+  @@index([userId])
+  @@index([createdAt])
+}
+
+model CommentReport {
+  id        String   @id @default(cuid())
+  commentId String
+  userId    String
+  reason    String
+  createdAt DateTime @default(now())
+  comment   Comment  @relation(fields: [commentId], references: [id], onDelete: Cascade)
+
+  @@unique([commentId, userId])
+  @@index([commentId])
+}
+
+enum CommentStatus {
+  PENDING
+  APPROVED
+  REJECTED
+  SPAM
+}
+
+model SiteSettings {
+  id            String   @id @default(cuid())
+  key           String   @unique
+  value         String
+  category      String   @default("general")
+  description   String?
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+
+  @@index([category])
+}
+
+model SidebarWidget {
+  id        String   @id @default(cuid())
+  type      String   // "trending", "categories", "search", "ads", "newsletter", "tags", "custom"
+  title     String
+  isActive  Boolean  @default(true)
+  order     Int      @default(0)
+  config    Json?    // Widget-specific configuration
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([isActive, order])
+}
+
+model SidebarSettings {
+  id        String   @id @default(cuid())
+  isActive  Boolean  @default(true)
+  isSticky  Boolean  @default(true)
+  updatedAt DateTime @updatedAt
+}
+
+model SocialMedia {
+  id        String   @id @default(cuid())
+  platform  String   // "facebook", "twitter", "instagram", "youtube", "tiktok", "linkedin", "whatsapp"
+  url       String
+  isActive  Boolean  @default(true)
+  order     Int      @default(0)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([isActive, order])
+}
+
+model AuditLog {
+  id           String   @id @default(cuid())
+  userId       String?
+  action       String   // LOGIN, CREATE_ARTICLE, etc
+  resource     String?  // "article", "user", "category", etc
+  resourceId   String?
+  details      Json?
+  ipAddress    String?
+  userAgent    String?
+  status       String   // SUCCESS, FAILED
+  errorMessage String?
+  createdAt    DateTime @default(now())
+
+  @@index([userId])
+  @@index([action])
+  @@index([createdAt])
+  @@index([resource, resourceId])
+}
