@@ -81,7 +81,7 @@ export default async function ArticleNotFound() {
               Atau coba kategori populer:
             </p>
             <div className="flex flex-wrap gap-3 justify-center">
-              {popularCategories.map((category) => (
+              {popularCategories.map((category: any) => (
                 <Link 
                   key={category.id}
                   href={`/kategori/${category.slug}`}
