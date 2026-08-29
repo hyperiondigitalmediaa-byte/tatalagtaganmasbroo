@@ -31,7 +31,14 @@ async function getPopularCategories() {
     take: 4
   })
 
-  return categories
+  return categories as Array<{
+    id: string
+    name: string
+    slug: string
+    _count: {
+      articles: number
+    }
+  }>
 }
 
 export default async function ArticleNotFound() {
@@ -81,7 +88,7 @@ export default async function ArticleNotFound() {
               Atau coba kategori populer:
             </p>
             <div className="flex flex-wrap gap-3 justify-center">
-              {popularCategories.map((category: any) => (
+              {popularCategories.map((category) => (
                 <Link 
                   key={category.id}
                   href={`/kategori/${category.slug}`}
