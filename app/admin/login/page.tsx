@@ -135,7 +135,7 @@ export default function LoginPage() {
             <Button
               type="submit"
               className="w-full h-11 text-base font-semibold"
-              disabled={isLoading || (!isLocalhost && !captchaToken)}
+              disabled={isLoading}
             >
               {isLoading ? (
                 <>
