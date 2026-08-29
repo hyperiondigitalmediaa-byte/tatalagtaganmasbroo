@@ -1,39 +1,20 @@
-# ⚠️ PENTING: File ini berisi environment variables untuk Vercel
-# Copy semua ini ke Vercel Dashboard setelah deploy
-# JANGAN COMMIT FILE INI KE GIT!
+# Copy paste semua ini ke Vercel Environment Variables
+# Cara: Klik "Environment Variables" → Add satu per satu
 
-# Database (Neon DB)
-DATABASE_URL=postgresql://neondb_owner:npg_C2i9HaYJxVQh@ep-ancient-fire-a1xfw43f-pooler.ap-southeast-1.aws.neon.tech/neondb?sslmode=require
-DIRECT_DATABASE_URL=postgresql://neondb_owner:npg_C2i9HaYJxVQh@ep-ancient-fire-a1xfw43f.ap-southeast-1.aws.neon.tech/neondb?sslmode=require
+DATABASE_URL=postgresql://neondb_owner:npg_t6dF3iEpVJkD@ep-cool-star-azaeqmzs-pooler.c-3.ap-southeast-1.aws.neon.tech/neondb?sslmode=require
 
-# NextAuth (UPDATED - New Secret)
+DIRECT_DATABASE_URL=postgresql://neondb_owner:npg_t6dF3iEpVJkD@ep-cool-star-azaeqmzs.c-3.ap-southeast-1.aws.neon.tech/neondb?sslmode=require
+
 NEXTAUTH_SECRET=vVsEMfl5EC1O3c4neRB3T3/NtlW50jyU6630WFxGlkA=
-NEXTAUTH_URL=https://your-project-name.vercel.app
 
-# Google OAuth
-GOOGLE_CLIENT_ID=899111055025-ei4vjieupvgak2g2mikd5s4ljdpj1im4.apps.googleusercontent.com
-GOOGLE_CLIENT_SECRET=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
+GOOGLE_CLIENT_ID=488378246792-2unfirpgjb6p1ido494pri5av5ngmcen.apps.googleusercontent.com
 
-# Cloudinary
-NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME=droqacd9z
-CLOUDINARY_API_KEY=684392861579935
-CLOUDINARY_API_SECRET=fK_q8tLtPWOU5eXQLl7fix00JYQ
+GOOGLE_CLIENT_SECRET=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
 
-# Cloudflare Turnstile (CAPTCHA)
-NEXT_PUBLIC_TURNSTILE_SITE_KEY=0x4AAAAAAB_dlZwPvXBU8UKw
-TURNSTILE_SECRET_KEY=0x4AAAAAAB_dlXE_WzvGmr25WHUkzT9celk
+NEXT_PUBLIC_SITE_NAME=Kilas Net
 
-# Cron Job Secret
-CRON_SECRET=cron-secret-portal-berita-2024-secure-key-xyz789
-
-# Google Analytics
 NEXT_PUBLIC_GA_ID=G-JTPLZKCR8Z
 
-# Site Configuration
-NEXT_PUBLIC_SITE_URL=https://your-project-name.vercel.app
-NEXT_PUBLIC_SITE_NAME=Portal Berita
-
-# Email Configuration (Optional - bisa skip dulu)
 SMTP_HOST=smtp.gmail.com
 SMTP_PORT=587
 SMTP_SECURE=false
@@ -43,10 +24,16 @@ SMTP_FROM_NAME=Portal Berita
 SMTP_FROM_EMAIL=noreply@portalberita.com
 ADMIN_EMAIL=admin@portalberita.com
 
-# ============================================
-# CATATAN PENTING:
-# ============================================
-# 1. Ganti "your-project-name" dengan nama project Vercel Anda
-# 2. Setelah deploy, update NEXTAUTH_URL dan NEXT_PUBLIC_SITE_URL
-# 3. Update Google OAuth redirect URI di Google Cloud Console
-# 4. SMTP vars bisa di-skip dulu (optional)
+NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME=my8ifcns
+CLOUDINARY_API_KEY=554251815844999
+CLOUDINARY_API_SECRET=ZgRoAve7aUC1JkcrU_eRG5Nl24A
+
+NEXT_PUBLIC_TURNSTILE_SITE_KEY=0x4AAAAAAAEgMsvTN_fJRuzG9
+TURNSTILE_SECRET_KEY=0x4AAAAAAAEgMsuONnSiIcYylvJ8DOhMEyuQ
+
+UPSTASH_REDIS_REST_URL=https://evident-sturgeon-185267.upstash.io
+UPSTASH_REDIS_REST_TOKEN=gQAAAAAAAtOzAAIgcDIxZDAwM2ZmN2M1ZDU0NzdhODA2NzQwMmFmOWVjZDY2Mg
+
+CRON_SECRET=a49d15d3f1c7dc204ea5d1cb0b093cd434956fcaa66857bd427a84ebe840db86
+
+REVALIDATE_SECRET=revalidate_portal_berita_2025_secret_key
