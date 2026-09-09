@@ -43,3 +43,7 @@ next-env.d.ts
 /app/generated/prisma
 
 .vercel
+.env*.local
+
+# credentials files
+vercel-env-import.txt
