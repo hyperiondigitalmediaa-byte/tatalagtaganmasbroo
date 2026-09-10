@@ -113,16 +113,27 @@ export function ArticleForm({ categories, tags, initialData }: ArticleFormProps)
 
       const method = initialData ? "PATCH" : "POST"
 
+      // Prepare data for submission
+      const submitData: any = {
+        ...formData,
+        status: finalStatus,
+        scheduledAt: formData.scheduledAt || null,
+        excerpt: formData.excerpt || formData.content.substring(0, 200),
+        // Auto-generate metaTitle from title, truncate to 60 chars if needed
+        metaTitle: formData.metaTitle || formData.title.substring(0, 60),
+      }
+
+      // Remove empty optional URL fields to avoid validation errors
+      if (!submitData.canonicalUrl) delete submitData.canonicalUrl
+      if (!submitData.ogImage) delete submitData.ogImage
+      if (!submitData.focusKeyword) delete submitData.focusKeyword
+      if (!submitData.ogTitle) delete submitData.ogTitle
+      if (!submitData.ogDescription) delete submitData.ogDescription
+
       const res = await fetch(url, {
         method,
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          ...formData,
-          status: finalStatus,
-          scheduledAt: formData.scheduledAt || null,
-          excerpt: formData.excerpt || formData.content.substring(0, 200),
-          metaTitle: formData.metaTitle || formData.title,
-        }),
+        body: JSON.stringify(submitData),
       })
 
       if (res.ok) {
@@ -362,8 +373,9 @@ export function ArticleForm({ categories, tags, initialData }: ArticleFormProps)
                   }
                   maxLength={60}
                 />
-                <p className="text-sm text-muted-foreground">
+                <p className={`text-sm ${formData.metaTitle.length > 60 ? 'text-destructive' : 'text-muted-foreground'}`}>
                   {formData.metaTitle.length}/60 karakter (optimal: 50-60)
+                  {formData.metaTitle.length > 60 && ' - Terlalu panjang!'}
                 </p>
               </div>
 

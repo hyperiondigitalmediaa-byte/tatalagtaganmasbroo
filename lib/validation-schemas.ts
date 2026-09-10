@@ -26,7 +26,7 @@ export const articleSchema = z.object({
     .max(500, 'Excerpt maksimal 500 karakter')
     .optional(),
   
-  featuredImage: z.string().url('URL gambar tidak valid').optional(),
+  featuredImage: z.string().url('URL gambar tidak valid').optional().or(z.literal('')),
   
   categoryId: z.string().cuid('Category ID tidak valid'),
   
@@ -39,14 +39,14 @@ export const articleSchema = z.object({
   showViews: z.boolean().optional(),
   
   // SEO fields
-  metaTitle: z.string().max(60, 'Meta title maksimal 60 karakter').optional(),
-  metaDescription: z.string().max(160, 'Meta description maksimal 160 karakter').optional(),
-  metaKeywords: z.string().max(200, 'Meta keywords maksimal 200 karakter').optional(),
+  metaTitle: z.string().max(60, 'Meta title maksimal 60 karakter').optional().or(z.literal('')),
+  metaDescription: z.string().max(160, 'Meta description maksimal 160 karakter').optional().or(z.literal('')),
+  metaKeywords: z.string().max(200, 'Meta keywords maksimal 200 karakter').optional().or(z.literal('')),
   
   // Open Graph
-  ogTitle: z.string().max(60).optional(),
-  ogDescription: z.string().max(160).optional(),
-  ogImage: z.string().url().optional(),
+  ogTitle: z.string().max(60).optional().or(z.literal('')),
+  ogDescription: z.string().max(160).optional().or(z.literal('')),
+  ogImage: z.string().url().optional().or(z.literal('')),
 })
 
 export const articleUpdateSchema = articleSchema.partial()
