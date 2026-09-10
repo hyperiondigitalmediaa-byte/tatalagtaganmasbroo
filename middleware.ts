@@ -27,13 +27,13 @@ export async function middleware(request: NextRequest) {
   // Content Security Policy (CSP)
   const cspHeader = `
     default-src 'self';
-    script-src 'self' 'unsafe-eval' 'unsafe-inline' https://challenges.cloudflare.com https://www.googletagmanager.com https://www.google-analytics.com https://pagead2.googlesyndication.com;
+    script-src 'self' 'unsafe-eval' 'unsafe-inline' https://challenges.cloudflare.com https://www.googletagmanager.com https://www.google-analytics.com https://pagead2.googlesyndication.com https://adservice.google.com https://googleads.g.doubleclick.net;
     style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
     img-src 'self' data: blob: https: http:;
     font-src 'self' data: https://fonts.gstatic.com;
-    connect-src 'self' https://challenges.cloudflare.com https://www.google-analytics.com https://res.cloudinary.com;
-    frame-src 'self' https://challenges.cloudflare.com;
-    child-src 'self' https://challenges.cloudflare.com;
+    connect-src 'self' https://challenges.cloudflare.com https://www.google-analytics.com https://res.cloudinary.com https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://*.google.com https://*.doubleclick.net;
+    frame-src 'self' https://challenges.cloudflare.com https://googleads.g.doubleclick.net https://tpc.googlesyndication.com;
+    child-src 'self' https://challenges.cloudflare.com https://googleads.g.doubleclick.net;
     object-src 'none';
     base-uri 'self';
     form-action 'self';

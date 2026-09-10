@@ -90,14 +90,29 @@ export async function POST(request: NextRequest) {
 
     const body = await request.json()
     
+    console.log("=== Article Creation Debug ===")
+    console.log("Received data:", JSON.stringify(body, null, 2))
+    console.log("categoryId:", body.categoryId)
+    console.log("tags:", body.tags)
+    console.log("scheduledAt:", body.scheduledAt)
+    
     // Validate input with Zod
     const validation = validateData(articleSchema, body)
     if (!validation.success) {
+      console.error("=== VALIDATION FAILED ===")
+      console.error("Validation errors:", JSON.stringify(validation.errors, null, 2))
+      console.error("Received data:", JSON.stringify(body, null, 2))
       return NextResponse.json(
-        { error: "Validation failed", errors: validation.errors },
+        { 
+          error: "Validation failed", 
+          errors: validation.errors,
+          receivedData: body 
+        },
         { status: 400 }
       )
     }
+    
+    console.log("Validation passed ✓")
 
     const {
       title,
@@ -181,11 +196,19 @@ export async function POST(request: NextRequest) {
       await revalidateArticle(article.slug)
     }
 
+    console.log("Article created successfully:", article.id)
     return NextResponse.json(article, { status: 201 })
-  } catch (error) {
-    console.error("Error creating article:", error)
+  } catch (error: any) {
+    console.error("=== ARTICLE CREATION ERROR ===")
+    console.error("Error message:", error.message)
+    console.error("Error code:", error.code)
+    console.error("Full error:", error)
     return NextResponse.json(
-      { error: "Failed to create article" },
+      { 
+        error: "Failed to create article",
+        details: error.message,
+        code: error.code
+      },
       { status: 500 }
     )
   }
