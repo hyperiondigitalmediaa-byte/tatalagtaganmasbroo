@@ -122,8 +122,8 @@ export default function LoginPage() {
               </div>
             )}
 
-            {/* Cloudflare Turnstile CAPTCHA - Temporarily hidden */}
-            {false && !isLocalhost && (
+            {/* Cloudflare Turnstile CAPTCHA */}
+            {!isLocalhost && (
               <div className="flex justify-center">
                 <TurnstileWidget
                   onSuccess={(token) => setCaptchaToken(token)}

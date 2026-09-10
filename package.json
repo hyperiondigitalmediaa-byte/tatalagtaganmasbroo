@@ -8,6 +8,7 @@
     "start": "next start",
     "lint": "eslint",
     "create-admin": "tsx scripts/create-admin.ts",
+    "change-password": "tsx scripts/change-admin-password.ts",
     "seed-categories": "tsx scripts/seed-categories.ts",
     "cleanup-cloudinary": "tsx scripts/cleanup-cloudinary.ts",
     "seed-sidebar": "tsx scripts/seed-sidebar.ts",

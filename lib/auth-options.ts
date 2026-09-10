@@ -37,8 +37,6 @@ export const authOptions: NextAuthConfig = {
         }
 
         // Verify CAPTCHA token (skip in development/localhost)
-        // TEMPORARILY DISABLED - Enable after Turnstile domain configuration
-        /*
         const captchaToken = credentials.captchaToken as string
         const isDevelopment = process.env.NODE_ENV === 'development'
         
@@ -67,7 +65,6 @@ export const authOptions: NextAuthConfig = {
             }
           }
         }
-        */
 
         const user = await prisma.user.findUnique({
           where: { email: credentials.email as string }
