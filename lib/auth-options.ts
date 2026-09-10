@@ -36,7 +36,9 @@ export const authOptions: NextAuthConfig = {
           throw new Error("Email dan password harus diisi")
         }
 
-        // Verify CAPTCHA token (skip in development/localhost)
+        // Verify CAPTCHA token - DISABLED
+        // Uncomment to enable Turnstile CAPTCHA verification
+        /*
         const captchaToken = credentials.captchaToken as string
         const isDevelopment = process.env.NODE_ENV === 'development'
         
@@ -65,6 +67,7 @@ export const authOptions: NextAuthConfig = {
             }
           }
         }
+        */
 
         const user = await prisma.user.findUnique({
           where: { email: credentials.email as string }
